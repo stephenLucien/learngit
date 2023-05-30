@@ -51,4 +51,20 @@ git add *
 git commit -m "project init"
 git tag "v0.0.1"
 
+
+# workflow with personal branch
+git checkout basebranch
+touch addFileToMyPrivateBranch.txt
+git add addFileToMyPrivateBranch.txt
+git checkout -b dev_pri_user1
+git commit -m 'add a new file to my personal branch'
+# git push <remote> <local>
+git push origin dev_pri_user1
+# rename branch
+git branch -m dev_pri_user1 dev_pri_user2
+# push to remote 
+git push origin dev_pri_user2
+# delete old branch
+git push origin -d dev_pri_user1
+
 ```
